@@ -1,0 +1,31 @@
+<style>
+    form input, form textarea {
+        display:block;
+    }
+
+</style>
+
+<form method="POST" action="" enctype="multipart/form-data">
+
+    <label for="name">
+        Nom du département
+    </label>
+    <input type="text" name="name" id="name" value="{{ name }}"/>
+
+    <label for="localisation">
+        Localisation
+    </label>
+    <input type="text" name="localisation" id="localisation" value="{{ localisation }}"/>
+
+    <label for="description">
+        Description
+    </label>
+    <textarea type="text" name="description" id="description"></textarea>
+    <label for="photo">
+        photo
+    </label>
+    <input type="file" name="photo" id="photo">
+    {{ errorImage }}
+
+    <input type="submit" value="Enregistrer" name="enregistrer"/>
+</form>
